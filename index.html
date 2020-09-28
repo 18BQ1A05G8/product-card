@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16" />
+    <title>product Card</title>
+</head>
+<body id="back">
+    <div class="continer">
+      <div class="card">
+        <div class="image">
+          <p id="logo">Nike</p>
+          
+          <img src="/img/black.png" alt="" id="im">
+        </div>
+        <h2 class="name">Nike brand new shoe</h2>
+        <div class="size">
+          <h1>Size:</h1>
+          
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+        </div>
+        <div class="colors">
+          <h1>Colors:</h1>
+          <span class="red"  onclick="change(this.className)">r</span>
+          <span class="blue" onclick="change(this.className)">b</span>
+          <span class="green"  onclick="change(this.className)">g</span>
+          <span class="black"  onclick="change(this.className)">b</span>
+        </div>
+        <div class="get">
+          <div id="buy">
+            <p class="last">Add to cart</p>
+            <!-- <input type="button" id="last" value="Add to cart" style="color: black;"></input> -->
+          </div>
+          <p class="price">$99 /-</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function change(sp)
+      {
+        var image=document.getElementById("im");
+        var back=document.getElementById("back");
+        var buy=document.getElementById("buy");
+        if(sp=="red"){
+          back.style.backgroundColor="#ee2828"
+          image.src="./img/red.png";
+        buy.style.backgroundColor='#ee2828'
+        }
+        else if(sp=="green"){
+          back.style.backgroundColor="rgb(78, 212, 145)"
+          image.src="./img/green.png";
+          buy.style.backgroundColor='rgb(78, 212, 145)';
+        }
+        else if(sp=='black'){
+          back.style.backgroundColor="#000000";
+          image.src="./img/black.png";
+          buy.style.backgroundColor='#000000';
+        }
+        else{
+          back.style.backgroundColor="#4c49e7"
+          image.src="./img/blue.png";
+          buy.style.backgroundColor='#4c49e7';
+        }
+        image.style.transition="0.5s"
+      }
+
+    </script>
+</body>
+</html>
